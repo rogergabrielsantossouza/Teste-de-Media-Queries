@@ -1,0 +1,87 @@
+@charset "UTF-8";
+
+/* Todas as demais mídias */
+
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+@media print {
+    * {
+        font-family: 'PT Serif', serif;
+    }
+    
+    main {
+        width: 90vw;
+        border: 2px solid black;
+    }
+    
+    main::after {
+        content: 'Essa impressão foi realiza através do CursoEmVideo';
+        text-decoration: overline;
+    }
+    
+    main h1 {
+        text-shadow: none;
+        color: black;
+    }
+    
+    img#phone { display: none; }
+
+    img#print { display: block; margin: auto;}
+
+    img#pc { display: none; }
+
+    img#tablet { display: none; }
+    
+    img#tv { display: none; }
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    body {
+        background-image: url('../imagens/back-tablet.jpg');
+    }
+    
+    img#phone { display: none; }
+
+    img#print { display: none; }
+
+    img#pc { display: none; }
+
+    img#tablet { display: block; margin: auto; }
+    
+    img#tv { display: none; }
+
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+    body {
+        background-image: url('../imagens/back-pc.jpg');
+    }
+    
+    img#phone { display: none; }
+
+    img#print { display: none; }
+
+    img#pc { display: block; margin: auto; }
+
+    img#tablet { display: none; }
+    
+    img#tv { display: none; }
+
+}
+
+@media screen and (min-width: 1200px) {
+    body {
+        background-image: url('../imagens/back-tv.jpg');
+    }
+    
+    img#phone { display: none; }
+
+    img#print { display: none; }
+
+    img#pc { display: none; }
+
+    img#tablet { display: none; }
+    
+    img#tv { display: block; margin: auto; }
+
+}
